@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  let slideIndex = 0;
+  showSlides(); 
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    if (n === undefined) {
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+    } else {
+      slideIndex = n;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 3000);
+  }
+});
+
+
+
+    </script>
+  </head>
+
+  <body>
+      <h1>Jersey Film Company</h1>
+    <div id="nav">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>⋅</li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li>⋅</li>
+          <li><a href="shop.html">Shop</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p align="center"><b>We're Bringing Positive Film to the Masses</b></p>
+    <hr>
+    <br>
+
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="img1.jpg" style="width:100%">
+    
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img2.jpg" style="width:100%">
+    
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img3.jpg" style="width:100%">
+    
+  </div>
+
+
+</div>
+<br>
+
+    <p align="center">
+Jersey Film Co is providing the Film Photography Community with the option to shoot Kodak Positive Film at an affordable price. Experience unmatched clarity, vivid colors, and a unique slide result for just $17.00 
+    </p>
+      <p align="center">We are a group of college students from New Jersey passionate about film photography. We are excited to partner with several local labs to bring affordable Kodak Positive Film to you</p>
+    <hr>
+    <p align="center">jerseyfilmcompany@gmail.com</p>
+  </body>
+
+</html>
